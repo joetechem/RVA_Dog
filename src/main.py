@@ -85,7 +85,7 @@ def swim(intent, session):
     speech_output = "<speak>You can take your dog swimming at these palces... Pony Pasture, Texas Beach, The southside of Nickel Bridge are some places you can take your dog to swim in the James River. But, be sure the water level and flow are safe enough. You can also take your dog to the pool! You can bring your dog to Alpha Dog Club.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Where Your Dog can Swim", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def trail(intent, session):
@@ -107,8 +107,8 @@ def stop(intent, session):
     speech_output = ""
     should_end_session = True
     
-    card_output = ""
-    speech_output = "<speak></speak>"
+    card_output = "Have a nice day! Woof!"
+    speech_output = "<speak>Thank for asking R-V-A Dog about dog parks and places to take your dog swimming, walking and running. Have a nice day! Woof! Woof! Bark!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
@@ -120,8 +120,8 @@ def open_it(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Welcome to"
-    speech_output = "<speak></speak>"
+    card_output = "Welcome to the RVA Dog Amazon Alexa Skill"
+    speech_output = "<speak>Welcome to the RVA Dog skill. I can provide you with information about dog parks, places to take your dog swimming, or good trails to hike with your pooch. And a dog park I would recommend.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("RVA Dog", card_output, speech_output, reprompt_text, should_end_session))
@@ -163,8 +163,8 @@ def get_help(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Here are some things you can ask or tell RVA Dog:"
-    speech_output = "<speak>Need help navigating RVA Dog? Here are some keywords RVA Dog understands.</speak>"
+    card_output = "Here are some things you can ask or tell RVA Dog: What dog parks are in Richmond? Where can I take my dog to swim? What are some good trails for my dog? What dog park do you recommend?"
+    speech_output = "<speak>Need help navigating RVA Dog? Here are some keywords RVA Dog understands. What dog parks are in Richmond? Where can I take my dog to swim? What are some good trails for my dog? What dog park do you recommend?</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("How to Ask JoeDaddy", card_output, speech_output, reprompt_text, should_end_session))
@@ -182,13 +182,13 @@ def on_intent(intent_request, session):
     # Dispatch to skill's intent handlers
 
     if intent_name == "DogPark":
-        return nothing_works(intent, session)
-    elif intent_name == "Function2":
-        return gas(intent, session)
-    elif intent_name == "Function3":
-        return cycle(intent, session)
-    elif intent_name == "Function4":
-        return bored(intent, session)
+        return dog_parks(intent, session)
+    elif intent_name == "RecommendPlace":
+        return choice_park(intent, session)
+    elif intent_name == "SwimPlaces":
+        return swim(intent, session)
+    elif intent_name == "TrailPlaces":
+        return trail(intent, session)
     elif intent_name == "Stop":
         return stop(intent, session)
     elif intent_name == "Open":
