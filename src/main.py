@@ -4,10 +4,9 @@ Intents supported:
     Open
     GetHelp
     Stop
-    Gas
-    Cycle
-    Bored
-    NothingWorks
+    DogParks
+    SwimPlaces
+    TrailPlaces
 """
 
 import logging
