@@ -1,0 +1,25 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "NothingWorks"
+    },
+    {
+      "intent": "Gas"
+    },
+    {
+      "intent": "Cycle"
+    },
+    {
+      "intent": "Bored"
+    }
+  ]
+}
