@@ -1,5 +1,5 @@
 """
-Simple Python Lambda function providing helpful tips for new parents with a newborn.
+Simple Python Lambda function providing helpful tips for dog owners in Richmond, Va.
 Intents supported:
     Open
     GetHelp
@@ -55,49 +55,50 @@ def dog_parks(intent, session):
     should_end_session = True
 
     card_output = "  "
-    speech_output = "<speak>Here are several dog parks in Richmond, Virginia... Barker Field, Northside Dog Park, Church Hill Dog Park</speak>"
+    speech_output = "<speak>Here are several dog parks in Richmond, Virginia... Barker Field at Byrd Park, , Church Hill Dog Park at Chimborazo, Ruff House Dog Park at Rockwood Park, Phideaux Field at Forest Hill Presbyterian Church, and Lewis G Larus Park.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Dog Parks", card_output, speech_output, reprompt_text, should_end_session))
+                          ("RVA Dog Parks", card_output, speech_output, reprompt_text, should_end_session))
 
 
-def function2(intent, session):
+def choice_park(intent, session):
     session_attributes = {}
     reprompt_text = None
     speech_output = ""
     should_end_session = True
 
-    card_output = ""
-    speech_output = "<speak></speak>"
+    card_output = "Bandy Field."
+    speech_output = "<speak>A dog park that I would recommend? Well, that would be Bandy Field!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Recommended Dog Park", card_output, speech_output, reprompt_text, should_end_session))
 
 
-def function3(intent, session):
-    session_attributes = {}
-    reprompt_text = None
-    speech_output = ""
-    should_end_session = True
-    
-    card_output = ""
-    speech_output = "<speak></speak>"
-
-    return build_response(session_attributes, build_speechlet_response
-                          ("", card_output, speech_output, reprompt_text, should_end_session))
-
-
-def function4(intent, session):
+def swim(intent, session):
     session_attributes = {}
     reprompt_text = None
     speech_output = ""
     should_end_session = True
     
-    card_output = ""
-    speech_output = "<speak></speak>"
+    card_output = "River swimming: Pony Pasture, Texas Beach and Southside of Nickel Bridge" +
+    "Pool swimming: The Alpha Dog Club."
+    speech_output = "<speak>You can take your dog swimming at these palces... Pony Pasture, Texas Beach, The southside of Nickel Bridge are some places you can take your dog to swim in the James River. But, be sure the water level and flow are safe enough. You can also take your dog to the pool! You can bring your dog to Alpha Dog Club.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("", card_output, speech_output, reprompt_text, should_end_session))
+
+
+def trail(intent, session):
+    session_attributes = {}
+    reprompt_text = None
+    speech_output = ""
+    should_end_session = True
+    
+    card_output = "Buttermilk Trail and James River Park Trails."
+    speech_output = "<speak>Trails for your dog are... The Buttermilk Trail and the Trail of James River Park.</speak>"
+
+    return build_response(session_attributes, build_speechlet_response
+                          ("Dog Hiking Trails", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def stop(intent, session):
