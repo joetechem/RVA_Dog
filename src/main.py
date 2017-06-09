@@ -5,6 +5,7 @@ Intents supported:
     GetHelp
     Stop
     DogParks
+    RecommendPlace
     SwimPlaces
     TrailPlaces
 """
@@ -54,8 +55,8 @@ def dog_parks(intent, session):
     speech_output = ""
     should_end_session = True
 
-    card_output = "  "
-    speech_output = "<speak>Here are several dog parks in Richmond, Virginia... Barker Field at Byrd Park, , Church Hill Dog Park at Chimborazo, Ruff House Dog Park at Rockwood Park, Phideaux Field at Forest Hill Presbyterian Church, and Lewis G Larus Park.</speak>"
+    card_output = "Barker Field, Church Hill Dog Park, Ruff House, Phideaux Field, and Lewis G Larus Park."
+    speech_output = "<speak>Here are several dog parks in Richmond, Virginia... Barker Field at Byrd Park, Church Hill Dog Park at Chimborazo, Ruff House Dog Park at Rockwood Park, Phideaux Field at Forest Hill Presbyterian Church, and Lewis G Larus Park.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("RVA Dog Parks", card_output, speech_output, reprompt_text, should_end_session))
@@ -80,12 +81,12 @@ def swim(intent, session):
     speech_output = ""
     should_end_session = True
     
-    card_output = "River swimming: Pony Pasture, Texas Beach and Southside of Nickel Bridge" +
-    "Pool swimming: The Alpha Dog Club."
+    card_output = "River swimming: Pony Pasture, Texas Beach and Southside of Nickel Bridge. Pool swimming: The Alpha Dog Club."
+    
     speech_output = "<speak>You can take your dog swimming at these palces... Pony Pasture, Texas Beach, The southside of Nickel Bridge are some places you can take your dog to swim in the James River. But, be sure the water level and flow are safe enough. You can also take your dog to the pool! You can bring your dog to Alpha Dog Club.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Where Your Dog can Swim", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Where your Dog can Swim", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def trail(intent, session):
@@ -153,7 +154,7 @@ def on_launch(launch_request, session):
     
     # Dispatch to skill's launch
     return build_response({},build_speechlet_response(
-        "RVA Dog", "Welcome to the RVA Dog skill.</speak>","",False))
+        "RVA Dog", "Welcome to the RVA Dog skill. I can provide you with information about dog parks, places to take your dog swimming, or good trails to hike with your pooch. And a dog park I would recommend.","<speak>Welcome to the RVA Dog skill. I can provide you with information about dog parks, places to take your dog swimming, or good trails to hike with your pooch. And a dog park I would recommend.</speak>","",False))
 
 
 def get_help(intent, session):
@@ -167,7 +168,7 @@ def get_help(intent, session):
     speech_output = "<speak>Need help navigating RVA Dog? Here are some keywords RVA Dog understands. What dog parks are in Richmond? Where can I take my dog to swim? What are some good trails for my dog? What dog park do you recommend?</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("How to Ask JoeDaddy", card_output, speech_output, reprompt_text, should_end_session))
+                          ("How to Ask RVA Dog", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def on_intent(intent_request, session):
