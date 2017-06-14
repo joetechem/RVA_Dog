@@ -10,16 +10,31 @@
       "intent": "AMAZON.CancelIntent"
     },
     {
-      "intent": "NothingWorks"
+      "intent": "DogParks"
     },
     {
-      "intent": "Gas"
+      "intent": "RecommendPlace"
     },
     {
-      "intent": "Cycle"
+      "intent": "TrailPlaces"
     },
     {
-      "intent": "Bored"
+      "intent": "RiverPlaces"
+    },
+    {
+      "intent": "PoolPlaces"
+    },
+    {
+      "intent": "DogNoise"
+    },
+    {
+      "intent": "Stop"
+    },
+    {
+      "intent": "Open"
+    },
+    {
+      "intent": "GetHelp"
     }
   ]
 }
