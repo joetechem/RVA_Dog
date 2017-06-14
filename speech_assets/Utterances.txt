@@ -1,35 +1,27 @@
-NothingWorks crying
-NothingWorks calm
-NothingWorks calm my
-NothingWorks nothing works
-NothingWorks know
-Gas gas
-Gas guess
-Gas has gas
-Gas gasy
-Gas fart
-Gas farty
-Gas poop
-Gas uncomfortable
-Cycle what is the cycle
-Cycle cycle
-Cycle steps
-Cycle what do I do
-Bored bored
-Bored being bored
-Bored board
-Bored fidgety
-Bored active
-Bored activate
-Bored word
-Bored ditty
+DogParks what dog parks can i take my dog
+DogParks dog park
+DogParks play
+RecommendPlace what do you recommend
+RecommendPlace recommend
+TrailPlaces where can i take my dog hiking
+TrailPlaces hiking
+TrailPlaces running
+RiverPlaces where can my dog swim
+RiverPlaces swim
+RiverPlaces swimming
+RiverPlaces river
+RiverPlaces james river
+PoolPlaces where can my do go to the pool
+PoolPlaces pool
+DogNoise make a dog noise
+DogNoise noise
+DogNoise noises
+DogNoise bark
 Stop stop
 Stop stah
 Stop cancel
 Stop quit
-Open open
-Open pen
-Open JoeDaddy
 GetHelp help
-GetHelp I need help
-GetHelp say
+GetHelp i need help
+GetHelp what do i say
+GetHelp for help
