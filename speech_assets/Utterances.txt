@@ -1,11 +1,40 @@
 DogParks what dog parks can i take my dog
 DogParks dog park
+DogParks dog parks
 DogParks play
 RecommendPlace what do you recommend
 RecommendPlace recommend
-TrailPlaces where can i take my dog hiking
+RecommendPlace suggest
+Festivals festivals i can take my dog
+Festivals festival
+Festivals festivals
+Events events i can take my dog
+Events event
+Events events
+Brewery breweries i can take my dog
+Brewery brewery
+Brewery brew
+Brewery breweries
+BuryBones why does my dog bury bones
+BuryBones bury
+BuryBones bones
+BuryBones burying
+BuryBones bone
+BuryBones berry
+Tick my dog has a tick
+Tick tick
+Tick bite
+Tick remove
+TrailPlaces where can i take my dog hiking or running
 TrailPlaces hiking
 TrailPlaces running
+TrailPlaces run
+TrailPlaces hike
+TrailPlaces hide
+TrailPlaces walk
+TrailPlaces path
+TrailPlaces trail
+TrailPlaces trails
 RiverPlaces where can my dog swim
 RiverPlaces swim
 RiverPlaces swimming
@@ -13,10 +42,18 @@ RiverPlaces river
 RiverPlaces james river
 PoolPlaces where can my do go to the pool
 PoolPlaces pool
+EatGrass why does my dog eat grass
+EatGrass grass
+EatGrass eat
+Shedding how do i handle my dogs shedding
+Shedding shedding
+Shedding hairs
+Shedding combing
 DogNoise make a dog noise
 DogNoise noise
 DogNoise noises
 DogNoise bark
+DogNoise woof
 Stop stop
 Stop stah
 Stop cancel
