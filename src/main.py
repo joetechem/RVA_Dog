@@ -6,7 +6,9 @@ Intents supported:
     Stop
     DogParks
     RecommendPlace
+    Brewery
     Festivals
+    Events
     RiverPlaces
     PoolPlaces
     TrailPlace
@@ -76,50 +78,50 @@ def choice_park(intent, session):
     should_end_session = True
 
     card_output = "Bandy Field."
-    speech_output = "<speak>Hmmmm. A dog park that I would recommend? Well, that would be Bandy Field!</speak>"
+    speech_output = "<speak>Hmmmm. A dog park that I would recommend? That's tough! Because there are so many good ones. If I had to choose one to recommend, it would be Bandy Field!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Recommended Dog Park", card_output, speech_output, reprompt_text, should_end_session))
-                          
-                         
-def festivals(intent, session):
-    session_attributes = {}
-    reprompt_text = None
-    speech_output = ""
-    should_end_session = True
-    
-    card_output = "Dominion Riverrock; Richmond Vegetarian Festival; Hanover Vegetable Farm’s Strawberry and Wine Festival; Hanover Tomato Festival; Carytown Watermelon Festival; Ashland Strawberry Faire; Doswell Wine Festival; History Hounds; Under the Stars Outdoor movie; Red, White and Lights"
-    speech_output = "<speak>Here are some dog-freindly festivals in Richmond, Virginia. Dominion Riverrock. Richmond Vegetarian Festival. Hanover Vegetable Farm’s Strawberry and Wine Festival. Hanover Tomato Festival. Carytown Watermelon Festival. Ashland Strawberry Faire. Doswell Wine Festival. History Hounds. Under the Stars Outdoor movie. Red, White and Lights</speak>"
-
-    return build_response(session_attributes, build_speechlet_response
-                          ("Dog-Friendly Festivals in RVA", card_output, speech_output, reprompt_text, should_end_session))
 
 
-def events(intent, session):
-    session_attributes = {}
-    reprompt_text = None
-    speech_output = ""
-    should_end_session = True
-    
-    card_output = "Bark in the Park, Yappy Hour at Strangeways Brewing, Pups and Pints, Fido’s After Five, The Farmers Market at St. Stephen’s Episcopal Church."
-    speech_output = "<speak>Dog-freindly events in Richmond, Virginia. Bark in the Park. Yappy Hour at Strangeways Brewing. Pups and Pints. Fido’s After Five. The Farmers Market at St. Stephen’s Episcopal Church.</speak>"
-
-    return build_response(session_attributes, build_speechlet_response
-                          ("Dog-Friendly Events in RVA", card_output, speech_output, reprompt_text, should_end_session))
-                          
-            
 def brewery(intent, session):
     session_attributes = {}
     reprompt_text = None
     speech_output = ""
     should_end_session = True
-    
-    card_output = "Licking Hole Creek, Hardywood, Ardent, Garden Grove, Isley, Blue Bee Cider, Legend. "
-    speech_output = "<speak>Dog-freindly Breweries in Richmond, Virginia. Licking Hole Creek Brewery. Hardywood Park Brewery. Ardent Craft Ales. Garden Grove Brewery. Isley Brewery. Blue Bee Cider. Legend Brewery.</speak>"
+
+    card_output = "Hardywood, Licking Hole Creek, Ardent, Garden Grove, Isley, Legend, Blue Bee Cider."
+    speech_output = "<speak>Here are some dog friendly breweries in Richmond, Virginia. Hardywood, Licking Hole Creek, Ardent, Garden Grove, Isley, Legend Brewery, and Blue Bee Cider</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Dog-Friendly Breweries in RVA", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Dog-Friendly Breweries", card_output, speech_output, reprompt_text, should_end_session))
+                          
+                          
+def festivals(intent, session):
+    session_attributes = {}
+    reprompt_text = None
+    speech_output = ""
+    should_end_session = True
 
+    card_output = "Dominion Riverrock, Vegetarian Festival, Hanover Vegetable Farm's Strawberry and Wine Festival, Hanover Tomato Festival, and the Carytown Watermelon Festival."
+    speech_output = "<speak>Here are some dog friendly festivals in Richmond, Virginia. Dominion Riverrock. The Vegetarian Festival. Hanover Vegetable Farm's Strawberry and Wine Festival. Hanover Tomato Festival. and the Carytown Watermelon Festival. </speak>"
+
+    return build_response(session_attributes, build_speechlet_response
+                          ("Dog-Friendly Festivals", card_output, speech_output, reprompt_text, should_end_session))
+                          
+                          
+def events(intent, session):
+    session_attributes = {}
+    reprompt_text = None
+    speech_output = ""
+    should_end_session = True
+
+    card_output = "Bark in the Park, Yappy Hour at Strangeways Brewing, Pups and Pints, Fido's After Five, and the Farmers Market at St. Stephen's Episcopal Church."
+    speech_output = "<speak>Here are some dog friendly events in Richmond, Virginia. Bark in the Park, Yappy Hour at Strange ways Brewing, Pups and Pints, Fido's After Five, and the Farmers Market at St. Stephen's Episcopal Church.</speak>"
+
+    return build_response(session_attributes, build_speechlet_response
+                          ("Dog-Friendly Events", card_output, speech_output, reprompt_text, should_end_session))
+                          
 
 def swim(intent, session):
     session_attributes = {}
@@ -131,7 +133,7 @@ def swim(intent, session):
     speech_output = "<speak>You can take your dog swimming at these places... Pony Pasture. Texas Beach. The southside of the Nickel Bridge. Be sure the water level and flow are safe enough. You can also take your dog to the pool! Just ask me.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Where your Dog can Swim", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Swimming for your Dog", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def pool(intent, session):
@@ -154,7 +156,7 @@ def trail(intent, session):
     should_end_session = True
     
     card_output = "Planning a walk, run, or hike with your dog? Check out the Buttermilk Trail and James River Park Trails."
-    speech_output = "<speak>Here are some trails you can take your dog... The Buttermilk Trail. And the Trail of James River Park.</speak>"
+    speech_output = "<speak>Here are some trails to take your dog hiking or running... The Buttermilk Trail. And the Trail of James River Park.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Hiking Trails for Dogs", card_output, speech_output, reprompt_text, should_end_session))
@@ -192,7 +194,7 @@ def dog_tick(intent, session):
     should_end_session = True
     
     card_output = "To remove a tick, take a cotton swab or tissue with a little soap and water on it. Then, place on the tick, gently make circular motions until the tick lets go."
-    speech_output = "<speak>To remove a tick from your pup. First. Take a deep breath. Second. Put a little amount of soap and water on a cotton swab or tissue. Thirdly. Place it on the tick and gently move it in circular motions until the tick lets go. and Voila! Lastly. <break time=\"0.75s\"/> Keep an eye out for any abnormal skin surface changes where the tick was. and keep an eye on your dog's behavior.</speak>"
+    speech_output = "<speak>To remove a tick from your pup. First. Take a deep breath. This will be easier than you think. Second. Put a little amount of soap and water on a cotton swab or tissue. Thirdly. Place it on the tick and gently move it in circular motions. until the tick lets go. and Voila! Lastly. <break time=\"0.75s\"/> Keep an eye out for any abnormal skin surface changes where the tick was. and keep an eye on your dog's behavior.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("How to Remove a Tick", card_output, speech_output, reprompt_text, should_end_session))
@@ -208,7 +210,7 @@ def shedding(intent, session):
     speech_output = "<speak>Do you find dog hairs in every nick and cranny? Well. That's the dog life for you! Depending on your dog's breed. Your dog will always shed hairs to make room for new ones. You can handle the amount of hairs. They kindly leave for you by combing your dog at least once a week. The smaller the teeth of the brush, the better. Each brushing session should last at least 10 minutes.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Handle Shedding", card_output, speech_output, reprompt_text, should_end_session))
+                          ("How to Handle Shedding", card_output, speech_output, reprompt_text, should_end_session))
 
                           
                           
@@ -219,7 +221,7 @@ def dog_noises(intent, session):
     should_end_session = True
     
     card_output = "What do you think of my dog noises?"
-    speech_output = "<speak>Okay. I'll give it a go. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though, it feels good to get that out.</speak>"
+    speech_output = "<speak>Okay. I'll give it a go. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though, it strangely feels good to get that out.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Dog Noises", card_output, speech_output, reprompt_text, should_end_session))
@@ -246,8 +248,8 @@ def stop(intent, session):
     speech_output = ""
     should_end_session = True
     
-    card_output = "Have a nice day! Woof!"
-    speech_output = "<speak>Thank you for asking Koa Dog RVA about dog parks and places to take your dog swimming, walking and running. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
+    card_output = "Have a nice day! Woof! Woof!"
+    speech_output = "<speak>Thank you for asking Dogs in RVA about dog parks and places to take your dog swimming, walking and running. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
@@ -259,16 +261,16 @@ def open_it(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Welcome to the Koa Dog RVA Amazon Alexa Skill"
-    speech_output = "<speak>Welcome to the Koa Dog RVA skill. I can provide you with information about dog parks, places to take your dog swimming, or good trails to hike with your pooch. And a dog park I would recommend.</speak>"
+    card_output = "Welcome to the Amazon Alexa Skill, Dogs in RVA!"
+    speech_output = "<speak>Dogs in RVA welcome you to this skill. We can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pooch. And a dog park we recommend. This skill can also provide answers on why dogs might bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Koa Dog RVA", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Dogs in RVA", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def handle_session_end_request():
     card_title = "Session Ended"
-    speech_output = "Thank you for asking Koa Dog RVA."
+    speech_output = "Thank you for asking Dogs in RVA."
     should_end_session = True
     return build_response({}, build_speechlet_response(
         card_title, speech_output, None, should_end_session))
@@ -292,7 +294,7 @@ def on_launch(launch_request, session):
     
     # Dispatch to skill's launch
     return build_response({},build_speechlet_response(
-        "Koa Dog RVA", "Welcome to the Koa Dog RVA skill. I can provide you with information about dog parks, places to take your dog swimming, or good trails to hike with your pooch. And a dog park I would recommend.","<speak>Welcome to the RVA Dog skill. I can provide you with information about dog parks, places to take your dog swimming, or good trails to hike with your pooch. And a dog park I would recommend.</speak>","",False))
+        "Dogs in RVA", "Welcome to the Dogs in RVA skill. We can provide you with the names of a few dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events, good trails to hike with your pooch, and a dog park we recommend. This skill can also provides answers on why dogs might bury bones, eat grass and how to remove a dog tick, or how to handle massive shedding.", "<speak>Welcome to the Dogs in RVA skill. We can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pooch. And a dog park we recommend. This skill also provides answers on why dogs might bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>","",False))
 
 
 def get_help(intent, session):
@@ -302,11 +304,11 @@ def get_help(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Here are some things you can ask or tell RVA Dog: What dog parks are in Richmond? Where can I take my dog to swim? What are some good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? My dog has a tick."
-    speech_output = "<speak>Need help navigating RVA Dog? Here are some keywords RVA Dog understands. What dog parks are in Richmond? Where can I take my dog to swim? What are some good trails for my dog? What dog park do you recommend?</speak>"
+    card_output = "Here are some things you can ask or tell RVA Dog: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
+    speech_output = "<speak>Here are some keywords Dogs in RVA understand. What dog parks do you go to? Where in the river do you go swimming? Which trails do you go hiking? Which dog park do you recommend? Which festivals can you go to. Which breweries can you go to. Which events can you go to. Does your dog have a tick? Ask dogs in RVA how to remove one. I can also provide some information on why dogs might eat grass, or bury their bones, and how to handle shedding. I also hide an easter egg. My hint for you is <break time=\"1s\"/> I try mimicking and dog.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("How to Ask", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Things to Ask", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def on_intent(intent_request, session):
@@ -324,8 +326,8 @@ def on_intent(intent_request, session):
         return dog_parks(intent, session)
     elif intent_name == "RecommendPlace":
         return choice_park(intent, session)
-    elif intent_name == "Fesitvals":
-        return fesitvals(intent, session)
+    elif intent_name == "Festivals":
+        return festivals(intent, session)
     elif intent_name == "Events":
         return events(intent, session)
     elif intent_name == "Brewery":
