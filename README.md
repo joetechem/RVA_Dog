@@ -2,6 +2,6 @@
 
 The Amazon Alexa Skill, Dogs in RVA.  
 
-First submitted for certification around 3:00PM on June 15, 2017.  
+First submitted for certification at 2:30PM on June 15, 2017.  
 
 
