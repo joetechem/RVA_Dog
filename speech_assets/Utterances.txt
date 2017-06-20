@@ -1,31 +1,21 @@
-DogParks what dog parks can i take my dog
+DogParks what dog parks are there in richmond
 DogParks dog park
 DogParks dog parks
 DogParks play
 RecommendPlace what do you recommend
 RecommendPlace recommend
 RecommendPlace suggest
-Festivals festivals i can take my dog
+Festivals which festivals can my dog go to
 Festivals festival
 Festivals festivals
-Events events i can take my dog
+Events which events can my dog go to
 Events event
 Events events
-Brewery breweries i can take my dog
+Brewery which breweries can my dog go to
 Brewery brewery
 Brewery brew
 Brewery breweries
-BuryBones why does my dog bury bones
-BuryBones bury
-BuryBones bones
-BuryBones burying
-BuryBones bone
-BuryBones berry
-Tick my dog has a tick
-Tick tick
-Tick bite
-Tick remove
-TrailPlaces where can i take my dog hiking or running
+TrailPlaces where can i go hiking or running with my dog
 TrailPlaces hiking
 TrailPlaces running
 TrailPlaces run
@@ -40,12 +30,23 @@ RiverPlaces swim
 RiverPlaces swimming
 RiverPlaces river
 RiverPlaces james river
-PoolPlaces where can my do go to the pool
+PoolPlaces what pool can my dog go to
 PoolPlaces pool
-EatGrass why does my dog eat grass
+EatGrass why do dogs eat grass
 EatGrass grass
 EatGrass eat
-Shedding how do i handle my dogs shedding
+BuryBones why does my dog bury bones
+BuryBones bury
+BuryBones bones
+BuryBones burying
+BuryBones bone
+BuryBones berry
+Tick how do you remove a tick
+Tick my dog has a tick
+Tick tick
+Tick bite
+Tick remove
+Shedding how do I handle shedding
 Shedding shedding
 Shedding hairs
 Shedding combing
