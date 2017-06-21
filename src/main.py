@@ -249,7 +249,7 @@ def stop(intent, session):
     should_end_session = True
     
     card_output = "Have a nice day! Woof! Woof!"
-    speech_output = "<speak>Thank you for asking Dogs in RVA about dog parks and places to take your dog swimming, walking and running. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
+    speech_output = "<speak>Thank you for asking Richmond Dog Info about dog parks and places to take your dog swimming, walking and running. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
@@ -261,16 +261,16 @@ def open_it(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Welcome to the Amazon Alexa Skill, Dogs in RVA!"
-    speech_output = "<speak>Dogs in RVA welcome you to this skill. We can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pooch. And a dog park we recommend. This skill can also provide answers on why dogs might bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>"
+    card_output = "Welcome to the Amazon Alexa Skill, Richmond Dog Info!"
+    speech_output = "<speak>Welcome to the Richmond Dog Info Amazon Alexa skill. I can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pooch. And a dog park we recommend. This skill can also provide answers on why dogs might bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
-                          ("Dogs in RVA", card_output, speech_output, reprompt_text, should_end_session))
+                          ("Richmond Dog Info", card_output, speech_output, reprompt_text, should_end_session))
 
 
 def handle_session_end_request():
     card_title = "Session Ended"
-    speech_output = "Thank you for asking Dogs in RVA."
+    speech_output = "Thank you for asking Richmond Dog Info."
     should_end_session = True
     return build_response({}, build_speechlet_response(
         card_title, speech_output, None, should_end_session))
@@ -294,7 +294,7 @@ def on_launch(launch_request, session):
     
     # Dispatch to skill's launch
     return build_response({},build_speechlet_response(
-        "Dogs in RVA", "Welcome to the Dogs in RVA skill. We can provide you with the names of a few dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events, good trails to hike with your pooch, and a dog park we recommend. This skill can also provides answers on why dogs might bury bones, eat grass and how to remove a dog tick, or how to handle massive shedding.", "<speak>Welcome to the Dogs in RVA skill. We can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pooch. And a dog park we recommend. This skill also provides answers on why dogs might bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>","",False))
+        "Richmond Dog Info", "Welcome to the Amazon Alexa skill, Richmond Dog Info. I can provide you with the names of a few dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events, good trails to hike with your pooch, and a dog park we recommend. This skill can also provides answers on why dogs might bury bones, eat grass and how to remove a dog tick, or how to handle massive shedding.", "<speak>Welcome to the Amazon Alexa skill, Richmond Dog Info. I can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pup. And a dog park I recommend. This skill also provides answers on possible reasons why dogs bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>","",False))
 
 
 def get_help(intent, session):
@@ -304,8 +304,8 @@ def get_help(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Here are some things you can ask or tell RVA Dog: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
-    speech_output = "<speak>Here are some keywords Dogs in RVA understand. What dog parks do you go to? Where in the river do you go swimming? Which trails do you go hiking? Which dog park do you recommend? Which festivals can you go to. Which breweries can you go to. Which events can you go to. Does your dog have a tick? Ask dogs in RVA how to remove one. I can also provide some information on why dogs might eat grass, or bury their bones, and how to handle shedding. I also hide an easter egg. My hint for you is <break time=\"1s\"/> I try mimicking and dog.</speak>"
+    card_output = "Here are some things you can ask or tell Richmond Dog Info: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
+    speech_output = "<speak>Here are some topics you can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. Does your dog have a tick? Ask me how to remove one. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Things to Ask", card_output, speech_output, reprompt_text, should_end_session))
