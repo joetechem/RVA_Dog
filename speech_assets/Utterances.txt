@@ -5,13 +5,13 @@ DogParks play
 RecommendPlace what do you recommend
 RecommendPlace recommend
 RecommendPlace suggest
-Festivals which festivals can my dog go to
+Festivals dog friendly festivals
 Festivals festival
 Festivals festivals
-Events which events can my dog go to
+Events dog friendly events
 Events event
 Events events
-Brewery which breweries can my dog go to
+Brewery dog friendly breweries
 Brewery brewery
 Brewery brew
 Brewery breweries
