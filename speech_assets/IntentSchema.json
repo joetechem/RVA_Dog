@@ -16,6 +16,15 @@
       "intent": "RecommendPlace"
     },
     {
+      "intent": "Festivals"
+    },
+    {
+      "intent": "Events"
+    },
+    {
+      "intent": "Brewery"
+    },
+    {
       "intent": "TrailPlaces"
     },
     {
@@ -23,6 +32,18 @@
     },
     {
       "intent": "PoolPlaces"
+    },
+    {
+      "intent": "EatGrass"
+    },
+    {
+      "intent": "BuryBones"
+    },
+    {
+      "intent": "Tick"
+    },
+    {
+      "intent": "Shedding"
     },
     {
       "intent": "DogNoise"
