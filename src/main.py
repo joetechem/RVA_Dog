@@ -221,7 +221,7 @@ def dog_noises(intent, session):
     should_end_session = True
     
     card_output = "What do you think of my dog noises?"
-    speech_output = "<speak>Okay. I'll give it a go. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though, it strangely feels good to get that out.</speak>"
+    speech_output = "<speak>Okay. I'll give it a go. Uh. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though, it strangely feels good to get that out.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Dog Noises", card_output, speech_output, reprompt_text, should_end_session))
@@ -248,25 +248,12 @@ def stop(intent, session):
     speech_output = ""
     should_end_session = True
     
-    card_output = "Have a nice day! Woof! Woof!"
-    speech_output = "<speak>Thank you for asking Richmond Dog Info about dog parks and places to take your dog swimming, walking and running. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
+    card_output = "Have a nice day! Woof! Woof! Bark!"
+    speech_output = "<speak>Thank you for asking Richmond Dog Info. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
                           
-
-def open_it(intent, session):
-    session_attributes = {}
-    reprompt_text = None
-    speech_output = ""
-    should_end_session = False
-    
-    card_output = "Welcome to the Amazon Alexa Skill, Richmond Dog Info!"
-    speech_output = "<speak>Welcome to the Richmond Dog Info Amazon Alexa skill. I can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pooch. And a dog park we recommend. This skill can also provide answers on why dogs might bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>"
-
-    return build_response(session_attributes, build_speechlet_response
-                          ("Richmond Dog Info", card_output, speech_output, reprompt_text, should_end_session))
-
 
 def handle_session_end_request():
     card_title = "Session Ended"
@@ -294,7 +281,7 @@ def on_launch(launch_request, session):
     
     # Dispatch to skill's launch
     return build_response({},build_speechlet_response(
-        "Richmond Dog Info", "Welcome to the Amazon Alexa skill, Richmond Dog Info. I can provide you with the names of a few dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events, good trails to hike with your pooch, and a dog park we recommend. This skill can also provides answers on why dogs might bury bones, eat grass and how to remove a dog tick, or how to handle massive shedding.", "<speak>Welcome to the Amazon Alexa skill, Richmond Dog Info. I can provide you with names of dog parks, places to take your dog swimming, dog-friendly breweries, festivals and events. or good trails to hike with your pup. And a dog park I recommend. This skill also provides answers on possible reasons why dogs bury bones, eat grass. And how to remove a dog tick, or how to handle massive shedding.</speak>","",False))
+        "Richmond Dog Info", "Welcome to the Amazon Alexa skill, Richmond Dog Info!", "<speak>Welcome to the Amazon Alexa skill, Richmond Dog Info. If you're not sure where you can take your dog in Richmond, Virginia. Just ask me! There are plenty of places and things to do in and around the city! From festivals, events, dog parks, breweries, trails and swimming spots. I also share some great information on common dog questions.</speak>","",False))
 
 
 def get_help(intent, session):
@@ -304,8 +291,8 @@ def get_help(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Here are some things you can ask or tell Richmond Dog Info: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
-    speech_output = "<speak>Here are some topics you can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. Does your dog have a tick? Ask me how to remove one. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
+    card_output = "Sample Questions to ask Richmond Dog Info: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
+    speech_output = "<speak>You can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. Does your dog have a tick? Ask me how to remove one. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Things to Ask", card_output, speech_output, reprompt_text, should_end_session))
@@ -350,8 +337,6 @@ def on_intent(intent_request, session):
         return shedding(intent, session)
     elif intent_name == "Stop":
         return stop(intent, session)
-    elif intent_name == "Open":
-        return open_it(intent, session)
     elif intent_name == "GetHelp":
         return get_help(intent, session)
 #    elif intent_name == "AMAZON.HelpIntent":
