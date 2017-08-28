@@ -292,7 +292,7 @@ def get_help(intent, session):
     should_end_session = False
     
     card_output = "Sample Questions to ask Richmond Dog Info: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
-    speech_output = "<speak>You can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. Does your dog have a tick? Ask me how to remove one. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
+    speech_output = "<speak>You can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. If your dog has a tick, ask me how to remove it. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Things to Ask", card_output, speech_output, reprompt_text, should_end_session))
