@@ -24,7 +24,7 @@ import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-
+import random
 # --------------- Helpers that build all of the responses ----------------------
 
 def build_speechlet_response(card_title, card_content, output, reprompt_text, should_end_session):
@@ -207,7 +207,7 @@ def shedding(intent, session):
     should_end_session = True
     
     card_output = "Use a hefty brush, like the Furminator. To really keep shedding under control, comb your dog at least once per week."
-    speech_output = "<speak>Do you find dog hairs in every nick and cranny? Well. That's the dog life for you! Depending on your dog's breed. Your dog will always shed hairs to make room for new ones. You can handle the amount of hairs. They kindly leave for you by combing your dog at least once a week. The smaller the teeth of the brush, the better. Each brushing session should last at least 10 minutes.</speak>"
+    speech_output = "<speak>Do you find dog hairs in every nook and cranny? Well, that's the dog life for ya! Depending on your dog's breed, your dog will shed hairs to make room for new ones. You can handle the amount of hairs they kindly leave for you by brushing your dog at least once a week. The smaller the teeth of the brush, the better. Each brushing session should last at least 10 minutes. If it's difficult to control your dog, get their energy out first at a dog park or on a fun hiking trail.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("How to Handle Shedding", card_output, speech_output, reprompt_text, should_end_session))
@@ -221,7 +221,7 @@ def dog_noises(intent, session):
     should_end_session = True
     
     card_output = "What do you think of my dog noises?"
-    speech_output = "<speak>Okay. I'll give it a go. Uh. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though, it strangely feels good to get that out.</speak>"
+    speech_output = "<speak>Okay, I'll give it a go. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though it feels good to get that out for some strange reason.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Dog Noises", card_output, speech_output, reprompt_text, should_end_session))
@@ -284,6 +284,17 @@ def on_launch(launch_request, session):
         "Richmond Dog Info", "Welcome to the Amazon Alexa skill, Richmond Dog Info!", "<speak>Welcome to the Amazon Alexa skill, Richmond Dog Info. If you're not sure where you can take your dog in Richmond, Virginia. Just ask me! There are plenty of places and things to do in and around the city! From festivals, events, dog parks, breweries, trails and swimming spots. I also share some great information on common dog questions.</speak>","",False))
 
 
+# List of example intents to return when get_help() is called
+example_intents = [
+    "dog-friendly breweries, festivals, or events.",
+    "dog parks, or one I'd recommend.",
+    "where to take  hiking and running trails.",
+    "how to remove a dog tick.",
+    "why does my dog eat grass.",
+    "why does my dog bury bones and other stuff.",
+    "tips to handle dog shedding."
+    ]
+
 def get_help(intent, session):
     """ Called when the user asks for help """
     session_attributes = {}
@@ -291,8 +302,8 @@ def get_help(intent, session):
     speech_output = ""
     should_end_session = False
     
-    card_output = "Sample Questions to ask Richmond Dog Info: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
-    speech_output = "<speak>You can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. Does your dog have a tick? Ask me how to remove one. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
+    card_output = "You can ask Richmond Dog Info: What dog parks are in Richmond? Dog-friendly breweries, festivals, or events? Where can I take my dog to swim or hike? Why does my dog eat grass? Why does my dog bury bones? How can I handle shedding or remove a tick?"
+    speech_output = "<speak>You can ask me about " + random.choice(example_intents) + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Things to Ask", card_output, speech_output, reprompt_text, should_end_session))
