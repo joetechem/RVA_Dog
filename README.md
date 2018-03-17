@@ -2,6 +2,6 @@
 
 The Amazon Alexa Skill, Richmond Dog Info.  
 
-First submitted for certification at 2:30PM on June 15, 2017.  
+First submitted for certification on June 15, 2017.  
 
 
