@@ -78,7 +78,7 @@ def choice_park(intent, session):
     should_end_session = True
 
     card_output = "Bandy Field."
-    speech_output = "<speak>Hmmmm. A dog park that I would recommend? That's tough! Because there are so many good ones. If I had to choose one to recommend, it would be Bandy Field!</speak>"
+    speech_output = "<speak>A dog park that I would recommend? <say-as interpret-as='interjection'>blast</say-as>. There are so many good ones. If I had to choose one, it would be Bandy Field!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Recommended Dog Park", card_output, speech_output, reprompt_text, should_end_session))
@@ -91,7 +91,7 @@ def brewery(intent, session):
     should_end_session = True
 
     card_output = "Hardywood, Licking Hole Creek, Ardent, Garden Grove, Isley, Legend, Blue Bee Cider."
-    speech_output = "<speak>Here are some dog friendly breweries in Richmond, Virginia. Hardywood, Licking Hole Creek, Ardent, Garden Grove, Isley, Legend Brewery, and Blue Bee Cider</speak>"
+    speech_output = "<speak>Here are some dog friendly breweries in Richmond. Hardywood, Licking Hole Creek, Ardent, Garden Grove, Isley, Legend Brewery, and Blue Bee Cider. Oh Hey, <say-as interpret-as='interjection'>cheers</say-as>.<audio src='https://s3.amazonaws.com/ask-soundlibrary/ambience/amzn_sfx_crowd_bar_01.mp3'/></speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Dog-Friendly Breweries", card_output, speech_output, reprompt_text, should_end_session))
@@ -181,7 +181,7 @@ def bury(intent, session):
     should_end_session = True
     
     card_output = "Your dog may bury their bone to keep their prized possession safe! It is thought to be an instinctual behavior."
-    speech_output = "<speak>Burying bones and other items, could be an instinctual behavior. Your dog probably just wants to keep their prized possessions safe!</speak>"
+    speech_output = "<speak>Burying bones and other items, could be a magical mystery. <audio src='https://s3.amazonaws.com/ask-soundlibrary/magic/amzn_sfx_fairy_melodic_chimes_01.mp3'/>, but most likely it is an instinctual behavior. Your dog probably just wants to keep their prized possessions safe!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Why Dogs Bury Bones", card_output, speech_output, reprompt_text, should_end_session))         
@@ -194,7 +194,7 @@ def dog_tick(intent, session):
     should_end_session = True
     
     card_output = "To remove a tick, take a cotton swab or tissue with a little soap and water on it. Then, place on the tick, gently make circular motions until the tick lets go."
-    speech_output = "<speak>To remove a tick from your pup. First. Take a deep breath. This will be easier than you think. Second. Put a little amount of soap and water on a cotton swab or tissue. Thirdly. Place it on the tick and gently move it in circular motions. until the tick lets go. and Voila! Lastly. <break time=\"0.75s\"/> Keep an eye out for any abnormal skin surface changes where the tick was. and keep an eye on your dog's behavior.</speak>"
+    speech_output = "<speak>To remove a tick from your pup. First. Take a deep breath. <say-as interpret-as='interjection'>phew!</say-as>. This will be easier than you think. Second. Put a little amount of soap and water on a cotton swab or tissue. Thirdly. Place it on the tick and gently move it in circular motions. until the tick lets go. and Voila!<say-as interpret-as='interjection'>read 'em and weep!</say-as>! You can dispose of the tick into a toilet.<say-as interpret-as='interjection'>plop!</say-as>.<say-as interpret-as='interjection'>good riddance!</say-as>.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("How to Remove a Tick", card_output, speech_output, reprompt_text, should_end_session))
@@ -207,12 +207,12 @@ def shedding(intent, session):
     should_end_session = True
     
     card_output = "Use a hefty brush, like the Furminator. To really keep shedding under control, comb your dog at least once per week."
-    speech_output = "<speak>Do you find dog hairs in every nook and cranny? Well, that's the dog life for ya! Depending on your dog's breed, your dog will shed hairs to make room for new ones. You can handle the amount of hairs they kindly leave for you by brushing your dog at least once a week. The smaller the teeth of the brush, the better. Each brushing session should last at least 10 minutes. If it's difficult to control your dog, get their energy out first at a dog park or on a fun hiking trail.</speak>"
+    speech_output = "<speak><say-as interpret-as='interjection'>oh my!</say-as>Do you find dog hairs in every nook and cranny? <say-as interpret-as='interjection'>blast!</say-as> Well, that's the dog life for you! Depending on your dog's breed, your dog will shed hairs to make room for new ones. You can handle the amount of hairs they kindly leave for you by brushing your dog at least once a week. The smaller the teeth of the brush, the better. Each brushing session should last at least 10 minutes. If it's difficult to control your dog, get their energy out first at a dog park or on a fun hiking trail.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("How to Handle Shedding", card_output, speech_output, reprompt_text, should_end_session))
 
-                          
+# throat_clear = ".<say-as interpret-as="interjection">abracadabra!</say-as>."                          
                           
 def dog_noises(intent, session):
     session_attributes = {}
@@ -221,7 +221,7 @@ def dog_noises(intent, session):
     should_end_session = True
     
     card_output = "What do you think of my dog noises?"
-    speech_output = "<speak>Okay, I'll give it a go. Ahhemmmm. <break time=\"1s\"/> WOOF! WOOF! Wuoof! Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though it feels good to get that out for some strange reason.</speak>"
+    speech_output = "<speak>Okay, I'll give it a go. <say-as interpret-as='interjection'>ahem!</say-as>. <break time=\"1s\"/> WOOF! WOOF! <say-as interpret-as='interjection'>woof!</say-as>. <say-as interpret-as='interjection'>woof!</say-as>. Bark! Arrrrggggghhhhhhhhhhhhhhhhhhhhhhhhhhu. <break time=\"1s\"/>Well.<break time=\"0.5s\"/> That was embarrassing. Though it feels good to get that out for some strange reason.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Dog Noises", card_output, speech_output, reprompt_text, should_end_session))
@@ -249,7 +249,7 @@ def stop(intent, session):
     should_end_session = True
     
     card_output = "Have a nice day! Woof! Woof! Bark!"
-    speech_output = "<speak>Thank you for asking Richmond Dog Info. Have a nice day! Woof Woof! Bark! Arrhhhhhhhhhhhhhu?</speak>"
+    speech_output = "<speak>Thank you for asking Richmond Dog Info. Have a nice day! <say-as interpret-as='interjection'>woof!</say-as>.<say-as interpret-as='interjection'>woof!</say-as>.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
@@ -302,13 +302,8 @@ def get_help(intent, session):
     speech_output = ""
     should_end_session = False
     
-<<<<<<< HEAD
     card_output = "You can ask Richmond Dog Info: What dog parks are in Richmond? Dog-friendly breweries, festivals, or events? Where can I take my dog to swim or hike? Why does my dog eat grass? Why does my dog bury bones? How can I handle shedding or remove a tick?"
     speech_output = "<speak>You can ask me about " + random.choice(example_intents) + " </speak>"
-=======
-    card_output = "Sample Questions to ask Richmond Dog Info: What dog parks are in Richmond? Where can I take my dog to swim? What pool can my dog go to? What are good trails for my dog? What dog park do you recommend? Why does my dog eat grass? Why does my dog bury bones? How do you handle shedding? My dog has a tick."
-    speech_output = "<speak>You can ask Richmond Dog Info. What dog parks are in Richmond? What do you recommend? Which parts of the river can my dog swim? Where can I take my dog hiking or running? Tell me dog-friendly breweries, events, or festivals. If your dog has a tick, ask me how to remove it. Why does my dog eat grass? Why does my dog bury bones. How can I handle my dog's shedding. I also hide an easter egg. <break time=\"1s\"/> I also try mimicking a dog. Just ask me to make a dog noise.</speak>"
->>>>>>> 62b471ab55aa8a1af7b12b3f52ef8057f6e9da4c
 
     return build_response(session_attributes, build_speechlet_response
                           ("Things to Ask", card_output, speech_output, reprompt_text, should_end_session))
